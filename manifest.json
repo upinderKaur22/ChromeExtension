@@ -1,0 +1,25 @@
+{
+    // Extension ID: knldjmfmopnpolahpmmgbagdohdnhkik
+    "key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDcBHwzDvyBQ6bDppkIs9MP4ksKqCMyXQ/A52JivHZKh4YO/9vJsT3oaYhSpDCE9RPocOEQvwsHsFReW2nUEc6OLLyoCFFxIb7KkLGsmfakkut/fFdNJYh0xOTbSN8YvLWcqph09XAY2Y/f0AL7vfO1cuCqtkMt8hFrBGWxDdf9CQIDAQAB",
+    "name": "Native Messaging Example",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Opens Calculator from Chrome Click",
+	"background": {
+		"scripts":["background.js"],
+		"persistent": true
+	},
+    "browser_action": {
+    "default_title": "Test Extension",
+	"default_icon": "iconDino.png"
+	
+    },
+	"content_scripts": [{
+		"matches": ["https://www.reddit.com/"],
+		"run_at": "document_idle",
+		"js": ["content.js"]
+	}],
+    "permissions": [
+    "nativeMessaging", "activeTab", "tabs", "http://*/*", "https://*/*"
+    ]
+}

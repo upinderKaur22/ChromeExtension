@@ -1,0 +1,10 @@
+{
+    "name": "calc",
+    "description": "Chrome Native Messaging API Example Host",
+    "path": "<<insert path to app>>",
+    "type": "stdio",
+    "allowed_origins": [
+    "chrome-extension://knldjmfmopnpolahpmmgbagdohdnhkik/"
+    ]
+}
+
